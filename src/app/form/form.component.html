@@ -1,0 +1,77 @@
+<div class="text-center">Create New Programme
+</div>
+<div class="d-flex container justify-content-center align-items-center p-2 border shadow w-50 h-100">
+
+    <form [formGroup]="dform">
+
+        <div class=" flex-column col-12 w-100  small mb-2">
+            <label class="w-100 ">
+                Change Reference
+                <input class="form-control h-50 w-100 mt-1" type="text" formControlName="change_ref" required>
+            </label>
+            <label class="w-100 ">
+                Title
+                <input class="w-100 mt-1" type="text" formControlName="title" required>
+            </label>
+            <label class="w-100 ">
+                SAP Codes
+                <input class="w-100 mt-1" type="text">
+            </label>
+            <label class="w-100 ">
+                Project / Programme Pitch
+                <textarea class="w-100 mt-1" placeholder="Enter your text.." rows="2"></textarea>
+            </label>
+            <div class="d-flex flex-row ">
+                <div class="flex-column col-6">
+                    <label class="w-100 ">
+                        Change Owner
+                        <input class="w-100  mt-1" type="text" formControlName="change_own" required>
+                    </label>
+                </div>
+                <div class="flex-column col-6">
+                    <label class="w-100 ">
+                        Cost (Estimate)
+                        <input class="w-100   mt-1" type="text">
+                    </label>
+                </div>
+            </div>
+
+            <div class="d-flex flex-row ">
+                <div class="flex-column col-6">
+                    <label class="w-100 ">
+                        Start Date
+                        <input class=" w-100  mt-1" type="text" formControlName="startdate" required>
+
+                    </label>
+                </div>
+                <div class="flex-column col-6">
+                    <label class="w-100 ">
+                        Estimated End Date
+                        <input class="w-100  mt-1" type="text">
+                    </label>
+                </div>
+            </div>
+            <div class="d-flex flex-row ">
+                <label class="w-100 ">
+                    Financial Benefits</label>
+                <label class="flex-column col-5 w-100 ">
+                    Description</label>
+                <label class="flex-column col-3 w-100 ">
+                    Benefit Value</label>
+                <label class="flex-column col-2 w-100 ">
+                    Status</label>
+            </div>
+            <div class="d-flex flex-row  ">
+                <input class=" flex-column col-5 w-100  mr-1 mt-1" type="text">
+                <input class="flex-column col-3 w-100  mr-1 mt-1" type="text">
+                <input class="flex-column col-2 w-100  mr-1 mt-1" type="text">
+                <div class="text-center col-2"><i class="flex-column col-2 fa fa-trash" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="mb-3 mt-2"><i class="fa fa-plus mr-1"></i>
+                Add Benefit</div>
+            <button (click)="goToCreate()" class="btn float-right text-white">+Create</button>
+        </div>
+    </form>
+
+</div>
